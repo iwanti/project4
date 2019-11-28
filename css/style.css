@@ -1,0 +1,286 @@
+*												/*去除网页默认样式*/
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background: -webkit-linear-gradient(
+    top,#6CFFE9,#09FF27); 						/*网页采用浅蓝和绿色从上往下的渐变色*/
+}
+#container
+{
+    width: 1000px;
+    height: auto;								/*高度自动*/
+    margin: 0 auto;								/*网页主容器居中*/
+}
+#header
+{
+    width: 1000px;
+    height: 300px;
+}
+#header .title{
+	width: 320px;
+	height: 50px;
+}
+#header .title>h1{								/*仅对头部标题容器下的h1施加样式*/
+	color: white;
+	text-shadow: 2px 2px 5px gray;				/*文字阴影，水平、垂直分别偏移2像素，模糊度5px,颜色为灰色*/
+	font-size: 20px;
+	display: inline;							/*把h1设为行内元素*/
+	line-height: 50px;
+}
+#header .title>p{								/*仅对头部标题容器下的p施加样式*/
+	color: gray;
+	font-size: 12px;
+	font-weight: bold;
+	display: inline;							/*把p设为行内元素*/
+	line-height: 50px;
+}
+#header .bg{												/*头部大背景样式*/
+	width: 1000px;
+	height: 200px;
+	background: white;
+	border-radius: 15px 15px 15px 0;						/*除左下圆角为0，其它圆角均为15px*/
+	box-shadow: 0px 0px 3px 4px rgba(150,150,150,0.6);		/*边框阴影模糊度3px,向外扩展4px,灰色，透明度0.6*/
+	display: flex;											/*将对象作为弹性伸缩盒显示*/
+	justify-content: center;								/*使项目位于容器中心*/
+	align-items: center;									/*使元素位于容器中心*/
+}
+#header .bg>img{
+	width: 990px;
+}
+#header .menu{												/*头部菜单栏背景样式*/
+	width: 600px;
+	height: 50px;
+	background: white;
+	border-radius: 0 0 15px 15px;							/*左上和右上两个圆角为0，左下和右下两个圆角为15px;*/
+	box-shadow: 0px 8px 3px 4px rgba(150,150,150,0.6);		/*边框阴影横向偏移为0，纵向向下偏移8px，模糊度3px，向外扩展4px，灰色*/
+}
+#header .menu ul{
+	list-style: none;										/*去除小圆点*/
+	display: table;											/*使该元素按table样式渲染，这里便于居中*/
+	margin: 0 auto;
+	line-height: 40px;
+}
+#header .menu li{
+	float: left;											/*左浮动*/
+	margin: 0px 10px;										/*上下外边距0，左右外边距10px*/
+}
+#header .menu li>a{
+	text-decoration: none;									/*去除下划线*/
+	color: green;
+	font-weight: bold;
+	width: 20px;
+	height: 30px;
+	padding: 10px 15px;										/*a标签上下内边距10px,左右内边距15px;*/
+	border-radius: 10px;
+	-webkit-transition: background,color 0.5s;				/*这3个属性都是设置不同浏览器下背景和文字的过渡时间*/
+	-o-transition: background,color 0.5s;
+	transition: background,color 0.5s;
+}
+#header .menu li>a:hover{									/*鼠标经过的效果*/
+	background: #09CD35;
+	color: white;
+}
+#content_area{
+	width: 1000px;
+	height: 500px;
+	margin-top: 40px;						/*上边距40px*/
+}
+#content_area_left{
+	width: 300px;
+	height: 500px;
+	float: left;							/*左浮动*/
+}
+#content_area_left .section1{				/*左部上容器*/
+	width: 300px;
+	height: 200px;
+	border-radius: 10px;					/*边框圆角10px*/
+	position: relative;						/*相对定位*/
+	background: rgba(255,255,255,0.5);		/*背景颜色灰色半透明*/
+}
+.section1 img{								/*账户登录logo*/
+	width: 40px;
+	position: absolute;						/*绝对定位*/
+	left: 55px;
+	top: 5px;
+}
+.section1 .login_title h2{					/*登录标题样式*/
+	line-height: 50px;
+	font-weight: bold;
+	font-size: 20px;
+	color: #2D862F;
+	text-align: center;
+}
+.section1 .login_bg{						/*账户登录背景*/
+	width: 280px;
+	height: 140px;
+	margin: 0 auto;							/*容器内居中*/
+	background: rgba(0,255,90,0.6);			/*背景绿色半透明*/
+	border-radius: 10px;					/*圆角10px*/
+}
+.section1 .login_bg table{
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.login_bg table tr{
+	line-height: 35px;
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+}
+.login_bg table td input[type="text"]{		/*仅对表格内属性为文本框的input标签施加样式*/
+	width: 150px;
+	height: 20px;
+}
+.login_bg .my-button{						/*提交、注册按钮样式*/
+	width: 100px;
+	height: 30px;
+	color: #087E12;
+	font-weight: bold;
+	background: white;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);	/*按钮阴影，0偏移，模糊度10px，黑色半透明*/
+	cursor: pointer;						/*光标样式为一只手*/
+	border-radius: 5px;						/*圆角5px*/
+	-webkit-transition: 0.2s;				/*各浏览器内动画过渡时间*/
+	-o-transition: 0.2s;
+	transition: 0.2s;
+}
+.login_bg .my-button:hover{					/*鼠标经过按钮样式*/
+	width: 100px;
+	height: 30px;
+	border: none;							/*去除原边框*/
+	color: #fff;
+	font-weight: bold;
+	background: #09CD35;
+	border-radius: 5px;						/*圆角5px*/
+}
+#content_area_left .section2{				/*左部下容器*/ 
+	width: 300px;
+	height: 280px;
+	margin-top: 20px;						/*顶部外边距20px*/
+	background: rgba(255,255,255,0.5);		/*背景灰色半透明*/
+	border-radius: 10px;					/*边框圆角10px*/
+	position: relative;						/*相对定位*/
+}
+.section2 img{								/*新闻频道logo*/
+	position: absolute;						/*绝对定位*/
+	width: 50px;
+	top: 0;
+	left: 50px;
+}
+.section2 .news_title h2{					/*新闻频道标题*/
+	text-align: center;						/*居中显示*/
+	line-height: 50px;						
+	font-weight: bold;
+	font-size: 20px;
+	color: #2D862F;
+}
+.section2 .news_bg{							/*新闻区域背景*/
+	width: 280px;
+	height: 220px;
+	margin: 0 auto;							/*居中显示*/
+	border-radius: 10px;					/*边框圆角10px*/
+	background: rgba(0,255,90,0.6);			/*背景绿色半透明*/
+}
+.section2 .news_bg ul{
+	margin:0 20px 0 20px;					/*ul左右外边距20px,使内部文字和背景隔开距离*/
+	padding-top: 20px;						/*顶部内边距20px*/
+}
+.section2 .news_bg li{				
+	font-size: 15px;
+	color: white;
+	list-style: none;						/*去除小圆点*/
+	text-shadow: 1px 1px 6px #000;			/*文本阴影水平、垂直偏移1px，模糊度6px，颜色为黑色*/
+	border-bottom: 1px dashed #fff;			/*底部边框粗细1px,虚线白色（假装水平分割线）*/
+	line-height: 35px;						
+}
+#content_area_right{						/*网页中部右容器*/
+	width: 670px;
+	height: 500px;
+	float: right;							/*右浮动*/
+}
+#content_area_right .section3{				/*右部上容器 */
+	width: 670px;
+	height: 200px;
+}
+.section3 h1{
+	font-size: 24px;
+	color: #338136;
+	font-weight: bold;
+	margin-bottom: 10px;					/*底部外边距10px*/
+}
+.section3 p{
+	font-size: 15px;
+	color: #0B3C0C;
+	line-height: 1.5em;						/*1.5倍行距*/
+	text-indent: 2em;						/*首行缩进2个字符*/
+	margin-bottom: 20px;					/*底部外边距20px*/
+}
+#content_area_right .section4{				/*右部下容器*/
+	width: 670px;
+	height: 280px;
+	margin-top: 20px;						/*顶部外边距20px*/
+	position: relative;						/*相对定位*/
+}
+.section4 h1{
+	font-size: 24px;
+	color: #338136;
+	font-weight: bold;
+	margin-bottom: 10px;					/*底部外边距10px*/
+}
+.section4 ul li{
+	position: relative;						/*相对定位*/
+	float: left;							/*左浮动*/
+	list-style: none;						/*去除小圆点*/
+	margin: 10px 13px;						/*上下外边距10px，左右外边距13px*/
+}
+.section4 .imax-flag{						/*imax图标*/
+    position: absolute;						/*绝对定位*/
+    width: 60px;
+    top: 0px;
+    left: -10px;							/*向左移10px*/
+    box-shadow: 1px 2px 5px #747474;		/*边框阴影水平向右偏移1px，垂直向下偏移2px，模糊度5px，灰色*/
+    z-index: 9999;							/*使该元素尽量堆叠在最上层*/
+}
+.section4 ul li img{						/*电影海报图片*/
+	width: 140px;
+	box-shadow: 0px 0px 10px white;			/*边框阴影0偏移，模糊度10px，白色*/
+	transition: all .3s;					/*动画过渡时间0.3秒*/
+}
+.section4 ul li:hover img{					/*鼠标经过电影海报效果*/
+	transform: scale(1.1);					/*图片进行1.1倍缩放*/
+}
+.section4 ul li:hover .mark{				/*鼠标经过电影海报遮罩*/
+	opacity: 0.8;							/*元素不透明级别为0.8*/
+    transition: all .3s;					/*动画过渡时间0.3秒*/
+    transform: scale(1.1);					/*1.1倍缩放*/
+    cursor: pointer;						/*光标样式为一只手*/
+}
+.section4 .mark{							/*海报遮罩*/
+	font-size: 20px;
+	font-weight: bold;
+	color: #215CAD;
+	text-align: center;						/*内部文本水平居中*/
+	line-height: 210px;						/*内部文本垂直居中*/
+	opacity: 0;								/*元素不透明级别为0*/
+	position: absolute;						/*绝对定位*/
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.6);		/*背景颜色灰色半透明*/
+}
+#footer{									/*底部容器*/
+	width: 1000px;
+	height: 40px;
+	font-size: 15px;
+	color: white;
+	text-shadow: 0 0 5px #000;				/*文本阴影黑色，0偏移，模糊度5px*/
+	margin-top: 20px;						/*顶部外边距20px*/
+	background: rgba(255,255,255,0.2);		/*背景颜色灰色，透明度0.2*/
+	border-radius: 20px;					/*边框圆角20px*/
+	text-align: center;						/*内部文本水平居中*/
+	line-height: 40px;						/*内部文本垂直居中*/
+}
